@@ -1,0 +1,52 @@
+<?php
+
+namespace App\Widgets;
+
+use App\Models\Doctor;
+use App\Models\Student;
+use Illuminate\Support\Str;
+use TCG\Voyager\Facades\Voyager;
+use Arrilot\Widgets\AbstractWidget;
+use Illuminate\Support\Facades\Auth;
+
+class StudentsWidget extends AbstractWidget
+{
+    /**
+     * The configuration array.
+     *
+     * @var array
+     */
+    protected $config = [];
+
+    /**
+     * Treat this method as a controller action.
+     * Return view() or other content to display.
+     */
+    public function run()
+    {
+        $count = Student::count();
+        $string = 'Students';
+
+        return view('voyager::dimmer', array_merge($this->config, [
+            'icon'   => 'voyager-people',
+            'title'  => "{$count} {$string}",
+            'text'   =>"You have {$count} {$string} in your database. Click on button below to view all {$string}.",
+            'button' => [
+                'text' => "View all {$string}",
+                'link' => route('voyager.students.index'),
+            ],
+            'image' => asset('booking/img/student.jpg'),
+        ]));
+    }
+
+    /**
+     * Determine if the widget should be displayed.
+     *
+     * @return bool
+     */
+    public function shouldBeDisplayed()
+    {
+        // return Auth::user()->can('browse', Voyager::model('Post'));
+        return auth()->user()->hasRole('registrar');
+    }
+}

@@ -1,0 +1,340 @@
+.section {
+	position: relative;
+	height: 100vh;
+}
+
+.section .section-center {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+#booking {
+	font-family: 'Imprima', sans-serif;
+	background-image: url('../img/bg.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+#booking::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: rgb(58 66 69 / 77%);
+	/* background: rgb(192 235 176 / 80%); */
+}
+
+
+.booking-form {
+	background: #343a40f0;
+	/* background: rgb(42, 41, 41); */
+	-webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.3);
+	max-width: 642px;
+	width: 100%;
+	margin: auto;
+	padding: 40px 30px;
+}
+
+.booking-form .form-group {
+	position: relative;
+	height: 80px;
+	margin-bottom: 10px;
+	margin-right: -10px;
+	margin-left: -10px;
+}
+
+.booking-form .form-control {
+	font-family: 'Cantata One', serif;
+	background-color: transparent;
+	border-radius: 0px;
+	border: none;
+	height: 80px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	font-size: 28px;
+	color: #333;
+	font-weight: 600;
+	background: rgba(255, 255, 255, 0.85);
+	padding-top: 30px;
+	-webkit-transition: 0.2s background;
+	transition: 0.2s background;
+}
+
+.booking-form .form-control:focus {
+	background: rgba(255, 255, 255, 1);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+	color: rgba(51, 51, 51, 0.3);
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+	color: rgba(51, 51, 51, 0.3);
+}
+
+.booking-form .form-control::placeholder {
+	color: rgba(51, 51, 51, 0.3);
+}
+
+.booking-form input[type="date"].form-control:invalid {
+	color: rgba(51, 51, 51, 0.3);
+}
+
+.booking-form select.form-control {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.booking-form select.form-control+.select-arrow {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 24px;
+	text-align: center;
+	pointer-events: none;
+	background: rgba(255, 255, 255, 0.3);
+	height: 80px;
+	line-height: 80px;
+}
+
+.booking-form select.form-control+.select-arrow:after {
+	content: '\279C';
+	display: block;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	color: #333;
+	font-size: 14px;
+}
+
+.booking-form .form-label {
+	/* color: #8c5d28; */
+	color: #cb3535;
+	display: block;
+	font-weight: 700;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	letter-spacing: 0.6px;
+	position: absolute;
+	left: 10px;
+	top: 0px;
+}
+
+.booking-form .form-btn {
+	height: 80px;
+	margin-right: -10px;
+	margin-left: -10px;
+	margin-bottom: 10px;
+}
+
+.booking-form .submit-btn {
+	background: #cb3535;
+	/* background: #8c5d28; */
+	border: none;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.6px;
+	height: 80px;
+	border-radius: 0px;
+	font-size: 18px;
+	width: 100%;
+	color: #fff;
+}
+
+.booking-cta {
+	text-align: center;
+}
+
+.booking-cta {
+
+	margin-top: 45px;
+	margin-bottom: 30px;
+}
+
+.booking-cta h1 {
+	font-family: 'Cantata One', serif;
+	color: #fff;
+	margin: 0px;
+	font-size: 52px;
+	font-weight: 700;
+}
+
+.vertical-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.check-data-form .check-input {
+	height: 55px !important;
+	padding-top: 0 !important;
+	font-size: 18px !important;
+}
+
+.check-data-form .input-group-text {
+	color: #cb3535 !important;
+}
+
+.rotateContent {
+	-webkit-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	transform: rotate(270deg);
+}
+
+.navbar-dark .navbar-brand {
+	background: #fff;
+	padding: 0 10px;
+	/* border-radius: 10px; */
+	font-weight: bold;
+}
+.nav-link{
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link {
+	color: #dc3545;
+}
+
+/* The check-container */
+.check-container {
+	color: #eee;
+	display: block;
+	position: relative;
+	padding-left: 45px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.check-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 35px;
+	width: 35px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.check-container:hover input~.checkmark {
+	background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.check-container input:checked~.checkmark {
+	/* background-color: #2196F3; */
+	background-color: #dc3545;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.check-container input:checked~.checkmark:after {
+	display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.check-container .checkmark:after {
+	top: 10px;
+	left: 10px;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
+.parent {
+	height: 100vh;
+}
+
+.parent>.row {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.col img {
+	height: 100px;
+	width: 100%;
+	cursor: pointer;
+	transition: transform 1s;
+	object-fit: cover;
+}
+
+.col label {
+	overflow: hidden;
+	position: relative;
+}
+
+.imgbgchk:checked+label>.tick_container {
+	opacity: 1;
+}
+
+/*         aNIMATION */
+.imgbgchk:checked+label>img {
+	transform: scale(1.25);
+	opacity: 0.3;
+}
+
+.tick_container {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	cursor: pointer;
+	text-align: center;
+}
+
+.tick {
+	/* background-color: #4CAF50; */
+	background-color: #dc3545;
+	color: white;
+	font-size: 16px;
+	padding: 6px 6px;
+	height: 40px;
+	width: 40px;
+	border-radius: 100%;
+}
