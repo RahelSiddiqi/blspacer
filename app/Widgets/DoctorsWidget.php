@@ -3,10 +3,10 @@
 namespace App\Widgets;
 
 use App\Models\Doctor;
-use Illuminate\Support\Str;
-use TCG\Voyager\Facades\Voyager;
 use Arrilot\Widgets\AbstractWidget;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use TCG\Voyager\Facades\Voyager;
 
 class DoctorsWidget extends AbstractWidget
 {
@@ -23,16 +23,16 @@ class DoctorsWidget extends AbstractWidget
      */
     public function run()
     {
-        $count = Doctor::count();
+        $count  = Doctor::count();
         $string = 'Doctors';
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-group',
-            'title'  => "{$count} {$string}",
-            'text'   =>"You have {$count} {$string} in your database. Click on button below to view all {$string}.",
+            'icon' => 'voyager-group',
+            'title' => "{$count} {$string}",
+            'text' => "You have {$count} {$string} in your database. Click on button below to view all {$string}.",
             'button' => [
                 'text' => "View all {$string}",
-                'link' => route('voyager.doctors.index'),
+                'link' => route('voyager.therapists.index'),
             ],
             // 'image' => voyager_asset('images/widget-backgrounds/02.jpg'),
             'image' => asset('booking/img/doctors.jpg'),

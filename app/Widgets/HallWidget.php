@@ -4,10 +4,10 @@ namespace App\Widgets;
 
 use App\Models\Booking;
 use App\Models\Hall;
-use Illuminate\Support\Str;
-use TCG\Voyager\Facades\Voyager;
 use Arrilot\Widgets\AbstractWidget;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use TCG\Voyager\Facades\Voyager;
 
 class HallWidget extends AbstractWidget
 {
@@ -24,16 +24,16 @@ class HallWidget extends AbstractWidget
      */
     public function run()
     {
-        $count = Hall::count();
+        $count  = Hall::count();
         $string = 'Halls';
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-shop',
-            'title'  => "{$count} {$string}",
-            'text'   =>"You have {$count} {$string} in your database. Click on button below to view all {$string}.",
+            'icon' => 'voyager-shop',
+            'title' => "{$count} {$string}",
+            'text' => "You have {$count} {$string} in your database. Click on button below to view all {$string}.",
             'button' => [
                 'text' => "View all {$string}",
-                'link' => route('voyager.halls.index'),
+                'link' => route('voyager.rooms.index'),
             ],
             'image' => asset('booking/img/bg.jpg'),
         ]));
